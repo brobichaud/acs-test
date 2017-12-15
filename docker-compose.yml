@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  acs-conn-test:
+    image: acs-conn-test
+    build:
+      context: ./acs-conn-tester
+      dockerfile: Dockerfile
+  acs-conn-testdn:
+    image: acs-conn-testdn
+    build:
+      context: ./acs-conn-testerdn
+      dockerfile: Dockerfile

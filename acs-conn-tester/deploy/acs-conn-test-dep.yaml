@@ -1,0 +1,29 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: dev-acs-conn-test
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: acs-conn-test
+      env: dev
+  template:
+    metadata:
+      labels:
+        app: acs-conn-test
+        env: dev
+    spec:
+      containers:
+        - name: dev-acs-conn-test
+          image: DOCKER_REG_NAME/acs-conn-test:1.0
+          imagePullPolicy: Always
+          env:
+          - name: CLOUD_ENVIRONMENT
+            value: dev
+      nodeSelector:
+        beta.kubernetes.io/os: windows
+      imagePullSecrets:
+        - name: cloudteam-registry
+ 

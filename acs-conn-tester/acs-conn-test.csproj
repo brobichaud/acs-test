@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>netcoreapp2.0</TargetFramework>
+		<Company>Digimarc</Company>
+		<Authors>Digimarc</Authors>
+		<Product>Fossil</Product>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="1.7.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update=".dockerignore">
+	    <DependentUpon>Dockerfile</DependentUpon>
+	  </None>
+	</ItemGroup>
+
+</Project>
