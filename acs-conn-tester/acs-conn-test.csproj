@@ -18,4 +18,26 @@
 	  </None>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="tools\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="..\tools\curl.exe" Link="tools\curl.exe">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="..\tools\libiconv-2.dll" Link="tools\libiconv-2.dll">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="..\tools\libintl-2.dll" Link="tools\libintl-2.dll">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="..\tools\nslookup.exe" Link="tools\nslookup.exe">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="..\tools\tar.exe" Link="tools\tar.exe">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
 </Project>

@@ -147,5 +147,27 @@
   <ItemGroup>
     <None Include="deploy\SimpleReplace.exe" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\tools\curl.exe">
+      <Link>tools\curl.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tools\libiconv-2.dll">
+      <Link>tools\libiconv-2.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tools\libintl-2.dll">
+      <Link>tools\libintl-2.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tools\nslookup.exe">
+      <Link>tools\nslookup.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tools\tar.exe">
+      <Link>tools\tar.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
