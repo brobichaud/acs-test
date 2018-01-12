@@ -13,8 +13,7 @@ namespace ConnectivityTester
 	public class Tester
 	{
 		// these are free throwaway accounts, replace with your own as needed
-		string logglyEndpoint = "http://logs-01.loggly.com/inputs/0a633766-26f5-4a41-8ad9-efe6ff08a5a9/tag/http/";
-		//string logglyEndpoint = "http://logs-01.loggly.com/inputs/d5bdf925-a0ac-4508-a5e3-2a9f0c8f691a/tag/http/";
+		string logglyEndpoint = "http://logs-01.loggly.com/inputs/d5bdf925-a0ac-4508-a5e3-2a9f0c8f691a/tag/http/";
 		string cosmosEndpoint = "https://a8c3b57a-0ee0-4-231-b9ee.documents.azure.com:443/";
 		string cosmosKey = "0kRT3Mw4rJtoPPRLF3g3U1rUfb5Ia3cZPreqU6uy4zW6I6gxFXNou00xDRSTL51nUjNupFP81mPMhoRlr7vnjw==";
 		
