@@ -13,15 +13,15 @@ echo.
 goto end
 
 :begin
-docker login %DOCKER_REG_NAME% -u %DOCKER_REG_USER% -p %DOCKER_REG_PWD%
+docker login %CLOUD_REG_NAME% -u %CLOUD_REG_USER% -p %CLOUD_REG_PWD%
 
 ::push acs-conn-test
 docker stop acs-conn-test
 docker rm acs-conn-test
 docker rmi acs-conn-test:%1
-docker rmi %DOCKER_REG_NAME%/acs-conn-test:%1
+docker rmi %CLOUD_REG_NAME%/acs-conn-test:%1
 docker tag acs-conn-test:latest acs-conn-test:%1
-docker tag acs-conn-test:%1 %DOCKER_REG_NAME%/acs-conn-test:%1
-docker push %DOCKER_REG_NAME%/acs-conn-test:%1
+docker tag acs-conn-test:%1 %CLOUD_REG_NAME%/acs-conn-test:%1
+docker push %CLOUD_REG_NAME%/acs-conn-test:%1
 
 :end

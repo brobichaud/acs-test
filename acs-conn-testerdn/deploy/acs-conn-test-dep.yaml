@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: dev-acs-conn-testdn
-          image: DOCKER_REG_NAME/acs-conn-testdn:1.0
+          image: CLOUD_REG_NAME/acs-conn-testdn:1.0
           imagePullPolicy: Always
           env:
           - name: CLOUD_ENVIRONMENT

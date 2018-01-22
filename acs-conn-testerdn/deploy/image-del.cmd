@@ -15,7 +15,7 @@ goto end
 echo Deleting acs-conn-testdn container images...
 echo.
 rem NOTE this does NOT delete the images in the private registry, only the local copies/tags
-docker rmi %DOCKER_REG_NAME%/acs-conn-testdn:%1
+docker rmi %CLOUD_REG_NAME%/acs-conn-testdn:%1
 docker rmi acs-conn-testdn:%1
 
 :end
