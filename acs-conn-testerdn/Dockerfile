@@ -1,11 +1,11 @@
-FROM microsoft/dotnet-framework:4.7.1-windowsservercore-1709
-#FROM microsoft/dotnet-framework:4.7.1-windowsservercore-ltsc2016
+#FROM microsoft/dotnet-framework:4.7.1-windowsservercore-1709
+FROM microsoft/dotnet-framework:4.7.1-windowsservercore-ltsc2016
 
 # mitigates DNS issues in Windows Containers (not for production use)
 # approach1
-#SHELL ["cmd", "/S", "/C"]
-#RUN net stop dnscache
-#RUN sc config dnscache start=disabled
+SHELL ["cmd", "/S", "/C"]
+RUN net stop dnscache
+RUN sc config dnscache start=disabled
 # approach2
 #SHELL ["cmd", "/S", "/C"]
 #RUN net stop dnscache

@@ -1,11 +1,11 @@
-FROM microsoft/dotnet:2.0-runtime-nanoserver-1709
-#FROM microsoft/dotnet:2.0-runtime-nanoserver-sac2016
+#FROM microsoft/dotnet:2.0-runtime-nanoserver-1709
+FROM microsoft/dotnet:2.0-runtime-nanoserver-sac2016
 
 # mitigates DNS issues in Windows Containers (not for production use)
 # approach1
-#SHELL ["cmd", "/S", "/C"]
-#RUN net stop dnscache
-#RUN sc config dnscache start=disabled
+SHELL ["cmd", "/S", "/C"]
+RUN net stop dnscache
+RUN sc config dnscache start=disabled
 # approach2
 #SHELL ["cmd", "/S", "/C"]
 #RUN net stop dnscache
