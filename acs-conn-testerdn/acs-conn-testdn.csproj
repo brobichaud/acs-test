@@ -141,6 +141,9 @@
     <None Include="deploy\push-to-registry.cmd" />
     <None Include="Dockerfile" />
     <None Include="deploy\acs-conn-test-dep.yaml" />
+    <Content Include="entrypoint.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>
