@@ -14,7 +14,6 @@ goto end
 :begin
 echo Deploying acs-conn-test...
 SimpleReplace 0 acs-conn-test:1.0 acs-conn-test:%1 acs-conn-test-dep.yaml temp-deploy-conn.yaml
-SimpleReplace 0 CLOUD_REG_NAME %CLOUD_REG_NAME% temp-deploy-conn.yaml temp-deploy-conn.yaml
 kubectl apply -f temp-deploy-conn.yaml --record
 del /q temp-deploy-conn.yaml
 echo.

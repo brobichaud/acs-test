@@ -1,11 +1,11 @@
-#FROM microsoft/dotnet:2.0-runtime-nanoserver-1709
-FROM microsoft/dotnet:2.0-runtime-nanoserver-sac2016
+FROM microsoft/aspnetcore:2.0-nanoserver-1803
+#FROM microsoft/aspnetcore:2.0-nanoserver-sac2016
 
 # mitigation of DNS issues in Windows Containers
 # approach2 works with Server 1607 but is not recommended in production environments
-SHELL ["cmd", "/S", "/C"]
-RUN net stop dnscache
-RUN sc config dnscache start=disabled
+#SHELL ["cmd", "/S", "/C"]
+#RUN net stop dnscache
+#RUN sc config dnscache start=disabled
 
 ARG source
 WORKDIR /app

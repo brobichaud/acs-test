@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: dev-acs-conn-test
-          image: CLOUD_REG_NAME/acs-conn-test:1.0
+          image: discovercloud.azurecr.io/acs-conn-test:1.0
           imagePullPolicy: Always
           env:
           - name: CLOUD_ENVIRONMENT
@@ -25,5 +25,5 @@ spec:
       nodeSelector:
         beta.kubernetes.io/os: windows
       imagePullSecrets:
-        - name: cloudteam-registry
+        - name: discovercloud-registry
  

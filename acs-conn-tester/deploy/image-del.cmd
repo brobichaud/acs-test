@@ -15,7 +15,7 @@ goto end
 echo Deleting acs-conn-test container images...
 echo.
 rem NOTE this does NOT delete the images in the private registry, only the local copies/tags
-docker rmi %CLOUD_REG_NAME%/acs-conn-test:%1
+docker rmi discovercloud.azurecr.io/acs-conn-test:%1
 docker rmi acs-conn-test:%1
 
 :end

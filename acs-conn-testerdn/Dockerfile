@@ -1,16 +1,15 @@
-#FROM microsoft/dotnet-framework:4.7.1-windowsservercore-1709
-FROM microsoft/dotnet-framework:4.7.1-windowsservercore-ltsc2016
+FROM microsoft/dotnet-framework:4.7.2-runtime-windowsservercore-1803
+#FROM microsoft/dotnet-framework:4.7.2-runtime-windowsservercore-ltsc2016
 
 # mitigation of DNS issues in Windows Containers
 # approach2 works with Server 1607 but is not recommended in production environments
-SHELL ["cmd", "/S", "/C"]
-RUN net stop dnscache
-RUN sc config dnscache start=disabled
+#SHELL ["cmd", "/S", "/C"]
+#RUN net stop dnscache
+#RUN sc config dnscache start=disabled
 
 WORKDIR /app
 COPY ./bin/Release .
 ENTRYPOINT ["acs-conn-testdn.exe"]
-
 
 
 # mitigation of DNS issues in Windows Containers
