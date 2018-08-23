@@ -16,7 +16,7 @@ namespace ConnectivityTester
 		string logglyEndpoint = "http://logs-01.loggly.com/inputs/d5bdf925-a0ac-4508-a5e3-2a9f0c8f691a/tag/http/";
 		string cosmosEndpoint = "https://a8c3b57a-0ee0-4-231-b9ee.documents.azure.com:443/";
 		string cosmosKey = "0kRT3Mw4rJtoPPRLF3g3U1rUfb5Ia3cZPreqU6uy4zW6I6gxFXNou00xDRSTL51nUjNupFP81mPMhoRlr7vnjw==";
-		
+
 		private Timer _timer;
 		private int _intervalMs = 10 * 1000;
 		private static readonly ManualResetEvent _timerIdle = new ManualResetEvent(true);
@@ -58,7 +58,7 @@ namespace ConnectivityTester
 
 		async Task CheckLoggly()
 		{
-			Console.Write($"{DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ")} Checking loggly...");
+			//Console.Write($"{DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ")} Checking loggly...");
 
 			var items = new Dictionary<string, string>
 				{
@@ -82,7 +82,7 @@ namespace ConnectivityTester
 					var httpResponseMessage = await client.PostAsync(logglyEndpoint, content);
 				}
 
-				Console.WriteLine("Success!");
+				//Console.WriteLine("Success!");
 			}
 			catch (Exception e)
 			{
@@ -94,7 +94,7 @@ namespace ConnectivityTester
 
 		async Task CheckCosmos()
 		{
-			Console.Write($"{DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ")} Checking cosmos...");
+			//Console.Write($"{DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ")} Checking cosmos...");
 			DocumentClient client;
 
 			try
@@ -106,7 +106,7 @@ namespace ConnectivityTester
 					//	Console.WriteLine(db);
 				}
 
-				Console.WriteLine("Success!");
+				//Console.WriteLine("Success!");
 			}
 			catch (Exception e)
 			{
@@ -118,17 +118,17 @@ namespace ConnectivityTester
 
 		async Task CheckGoogle()
 		{
-			Console.Write($"{DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ")} Checking google...");
+			//Console.Write($"{DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ")} Checking google...");
 
 			try
 			{
 				using (HttpClient client = new HttpClient())
 				{
 					var response = await client.GetAsync("https://www.google.com");
-					if (response.IsSuccessStatusCode)
-						Console.WriteLine("Success!");
-					else
-						Console.WriteLine("Unknown result!");
+					//if (response.IsSuccessStatusCode)
+					//	Console.WriteLine("Success!");
+					//else
+					//	Console.WriteLine("Unknown result!");
 				}
 			}
 			catch (Exception e)

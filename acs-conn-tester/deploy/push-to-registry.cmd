@@ -4,11 +4,18 @@ rem Creates a tagged version and pushes to the private registry
 if /I "%1"=="-?" goto help
 if /I "%1"=="/?" goto help
 if /I "%1"=="" goto help
+if /I "%CLOUD_REG_PWD%"=="" goto missingpwd
 goto begin
 
 :help
 echo.
 echo You must specify an image tag version
+echo.
+goto end
+
+:missingpwd
+echo.
+echo ERROR: You must set the environment variable CLOUD_REG_PWD to be your registry password
 echo.
 goto end
 
