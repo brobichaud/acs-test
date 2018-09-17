@@ -1,50 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>netcoreapp2.0</TargetFramework>
+		<TargetFramework>netcoreapp2.1</TargetFramework>
 		<Company>Digimarc</Company>
 		<Authors>Digimarc</Authors>
 		<Product>Fossil</Product>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="entrypoint.cmd" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="1.7.1" />
+		<PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="2.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <None Update=".dockerignore">
 	    <DependentUpon>Dockerfile</DependentUpon>
 	  </None>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="tools\" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Content Include="..\tools\curl.exe" Link="tools\curl.exe">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="..\tools\libiconv-2.dll" Link="tools\libiconv-2.dll">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="..\tools\libintl-2.dll" Link="tools\libintl-2.dll">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="..\tools\nslookup.exe" Link="tools\nslookup.exe">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="..\tools\tar.exe" Link="tools\tar.exe">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="entrypoint.cmd">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
 	</ItemGroup>
 
 </Project>
